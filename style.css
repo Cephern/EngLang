@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --main-color: #30475e;
+  --second-color: #588da8;
+  --e-color: #77d8d8;
+  --l-color: #f2a365;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--main-color);
+  color: #eee;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-left: 0;
+  border-right: 0;
+}
+
+.logo {
+  margin: 20px 10px;
+  text-align: center;
+  font-size: 0.7em;
+  width: 30%;
+  border-right: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.logo h1,
+.logo p {
+  margin: 5px 0;
+}
+
+span.e {
+  color: var(--e-color);
+}
+
+span.l {
+  color: var(--l-color);
+}
+
+nav {
+  width: 70%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav ul li {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+nav li a {
+  text-decoration: none;
+  color: var(--e-color);
+}
+
+nav li:hover {
+  transform: scale(1.1);
+}
+
+main {
+  margin-top: 80px;
+  width: 380px;
+  display: grid;
+  grid-template-areas:
+    "header sideList"
+    "main sideList";
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+main h2 {
+  text-align: center;
+  grid-area: header;
+  color: var(--l-color);
+}
+
+#main-zone {
+  width: 260px;
+  grid-area: main;
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-zone .card {
+  text-align: center;
+}
+
+.word-wrapp {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.word-wrapp #word {
+  font-size: 20px;
+  color: var(--e-color);
+}
+
+.word-wrapp #pronounce {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.side-list {
+  grid-area: sideList;
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+  width: 120px;
+  text-align: center;
+}

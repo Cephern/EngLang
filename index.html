@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/5f29f09b9f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>EngLang</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1><span class="e">E</span>ng<span class="l">L</span>ang</h1>
+        <p>
+          <span class="e">Eng</span>lish <span class="l">Lang</span>uage Made
+          Clear
+        </p>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Слова</a>
+          </li>
+          <li>
+            <a href="#">Фразы</a>
+          </li>
+          <li>
+            <a href="#">Правила</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Слова to Words</h2>
+
+      <section id="main-zone">
+        <div class="card">
+          <div class="word-wrapp">
+            <p id="word">Bacon</p>
+            <button id="pronounce">
+              <i class="fas fa-volume-up fa-2x"></i>
+            </button>
+          </div>
+
+          <div class="transcription-wrapp">
+            <span id="eng">[bacon]</span>
+            <span id="rus">бэйкон</span>
+          </div>
+
+          <div class="translate-wrapp">
+            <p id="translation">Бекончик</p>
+          </div>
+        </div>
+
+        <div class="card-nav">
+          <button id="prev">
+            <i class="fas fa-chevron-circle-left"></i>
+          </button>
+
+          <button id="next">
+            <i class="fas fa-chevron-circle-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="side-list">
+        <h3>Words:</h3>
+        <ul>
+          <li class="active">Bacon</li>
+          <li>Grass</li>
+          <li>Around</li>
+          <li>The</li>
+          <li>Offices</li>
+          <li>You</li>
+          <li>Got</li>
+          <li>A</li>
+          <li>Fat</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
