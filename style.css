@@ -244,6 +244,18 @@ main h2 {
   padding: 10px;
 }
 
+.list ul li.easy {
+  color: #97e5ef;
+}
+
+.list ul li.normal {
+  color: #ffecc7;
+}
+
+.list ul li.hard {
+  color: #ff6363;
+}
+
 .list ul li.active {
   color: var(--l-color);
   font-weight: bold;
