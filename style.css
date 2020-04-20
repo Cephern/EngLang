@@ -86,7 +86,7 @@ nav li:hover {
 
 main {
   margin-top: 80px;
-  width: 380px;
+  width: 340px;
   display: grid;
   grid-template-areas:
     "header header header"
@@ -106,7 +106,7 @@ main h2 {
 }
 
 #main-zone {
-  width: 220px;
+  width: 200px;
   grid-area: main;
   display: flex;
   align-items: center;
@@ -141,8 +141,8 @@ main h2 {
 
 .panel {
   grid-area: panel;
+  width: 75px;
   border-left: 2px solid rgba(0, 0, 0, 0.3);
-  width: 80px;
   text-align: center;
   padding: 24px;
   display: flex;
@@ -154,12 +154,12 @@ main h2 {
 .panel-group {
   display: flex;
   flex-direction: column;
-  padding: 8px;
+  padding: 2px;
   cursor: pointer;
 }
 
 .panel-group i {
-  font-size: 30px;
+  font-size: 28px;
 }
 
 .panel-group p {
@@ -175,12 +175,11 @@ main h2 {
 }
 
 .panel-group:nth-child(3) {
-  /* color: #43d8c9; */
   color: #97e5ef;
 }
 
 .card-nav {
-  width: 80px;
+  width: 62px;
   grid-area: nav;
   display: flex;
   flex-direction: column;
@@ -217,7 +216,7 @@ main h2 {
 }
 
 .list {
-  width: 380px;
+  width: 340px;
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   margin-top: 40px;
