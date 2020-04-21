@@ -1,6 +1,7 @@
 const wordMain = document.getElementById("word");
 const transcription = document.getElementById("transcription");
 const translation = document.getElementById("translation");
+const voicesSelect = document.getElementById("voices");
 
 const pronounceBtn = document.getElementById("pronounce");
 const nextBtn = document.getElementById("next");
@@ -63,7 +64,7 @@ const words = [
   },
 ];
 
-let currentIndex = -1;
+let currentIndex = 0;
 
 function setCurrent(i) {
   if (i == words.length - 1) {
@@ -95,8 +96,40 @@ function constructList() {
   });
 }
 
+// Speech Synthesis
+const message = new SpeechSynthesisUtterance();
+
+function setTextMessage(text) {
+  message.text = text;
+}
+
+function speakText() {
+  speechSynthesis.speak(message);
+}
+
+//  Store voices
+let voices = [];
+
+function getVoices() {
+  voices = speechSynthesis.getVoices();
+
+  voices.forEach((voice) => {
+    const option = document.createElement("option");
+    option.value = voice.name;
+    option.innerText = `${voice.name} ${voice.lang}`;
+
+    voicesSelect.appendChild(option);
+  });
+}
+
+function setVoice(e) {
+  message.voice = voices.find((voice) => voice.name === e.target.value);
+}
+
 // Inits
+constructMain(currentIndex);
 constructList();
+getVoices();
 
 // Listeners
 list.addEventListener("click", (e) => {
@@ -123,3 +156,12 @@ easyBtn.addEventListener("click", (e) => {
   words[currentIndex].difficulty = "easy";
   constructList();
 });
+
+pronounceBtn.addEventListener("click", () => {
+  setTextMessage(words[currentIndex].eng);
+  speakText();
+});
+
+speechSynthesis.addEventListener("voiceschanged", getVoices);
+
+voicesSelect.addEventListener("change", setVoice);
