@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/5f29f09b9f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="practice.css" />
+    <title>EngLang Practice</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1><span class="e">E</span>ng<span class="l">L</span>ang</h1>
+        <p>
+          <span class="e">Eng</span>lish <span class="l">Lang</span>uage Made
+          Clear
+        </p>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Слова</a>
+          </li>
+          <li>
+            <a href="practice.html">Практика</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="lang-options">
+      <div class="eng-to-rus active">
+        <button>
+          <p>English</p>
+          <span>to</span>
+          <p>Русский</p>
+        </button>
+      </div>
+      <div class="rus-to-eng">
+        <button>
+          <p>Русский</p>
+          <span>to</span>
+          <p>English</p>
+        </button>
+      </div>
+    </div>
+
+    <section class="practice">
+      <div class="options">
+        <div class="only-hard option">
+          <button id="only-hard">Only Hard</button>
+        </div>
+        <div class="random option">
+          <button id="random">Random</button>
+        </div>
+        <div class="last option">
+          <button id="last-ten">Last 10</button>
+        </div>
+      </div>
+
+      <div class="training-wrapp">
+        <h2>Training</h2>
+
+        <div class="training-frame">
+          <div class="word">
+            <p>transparent</p>
+          </div>
+          <div class="example">
+            <p>прозрачный</p>
+          </div>
+          <button id="peek">
+            <i class="fas fa-eye"></i>
+            <!-- <i class="fas fa-eye-slash"></i> -->
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="progress-wrapp">
+      <progress value="60" max="100"></progress>
+      <span>6/10</span>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        &#169;<a href="#"
+          ><span class="j">J</span>ag<span class="m">M</span>ax</a
+        >
+        2020
+      </div>
+    </footer>
+
+    <script src="practice.js"></script>
+  </body>
+</html>

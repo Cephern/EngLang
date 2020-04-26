@@ -2,6 +2,9 @@ const wordMain = document.getElementById("word");
 const transcription = document.getElementById("transcription");
 const translation = document.getElementById("translation");
 const voicesSelect = document.getElementById("voices");
+const addWord = document.getElementById("add-word");
+const addTranscription = document.getElementById("add-transcription");
+const addTranslation = document.getElementById("add-translation");
 
 const pronounceBtn = document.getElementById("pronounce");
 const nextBtn = document.getElementById("next");
@@ -9,6 +12,7 @@ const nextBtn = document.getElementById("next");
 const hardBtn = document.querySelector(".hard");
 const normalBtn = document.querySelector(".normal");
 const easyBtn = document.querySelector(".easy");
+const sumbitBtn = document.getElementById("submit");
 
 const list = document.querySelector(".list ul");
 
@@ -96,40 +100,22 @@ function constructList() {
   });
 }
 
-// Speech Synthesis
 const message = new SpeechSynthesisUtterance();
+
+// Speech Synthesis
 
 function setTextMessage(text) {
   message.text = text;
+  message.lang = "en-US";
 }
 
 function speakText() {
   speechSynthesis.speak(message);
 }
 
-//  Store voices
-let voices = [];
-
-function getVoices() {
-  voices = speechSynthesis.getVoices();
-
-  voices.forEach((voice) => {
-    const option = document.createElement("option");
-    option.value = voice.name;
-    option.innerText = `${voice.name} ${voice.lang}`;
-
-    voicesSelect.appendChild(option);
-  });
-}
-
-function setVoice(e) {
-  message.voice = voices.find((voice) => voice.name === e.target.value);
-}
-
 // Inits
 constructMain(currentIndex);
 constructList();
-getVoices();
 
 // Listeners
 list.addEventListener("click", (e) => {
@@ -162,6 +148,16 @@ pronounceBtn.addEventListener("click", () => {
   speakText();
 });
 
-speechSynthesis.addEventListener("voiceschanged", getVoices);
+// sumbitBtn.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   let word = {
+//     id: words.length,
+//     eng: addWord.value.toLowerCase(),
+//     trans: addTranscription.value.toLowerCase(),
+//     rus: addTranslation.value.toLowerCase(),
+//     difficulty: "hard",
+//   };
 
-voicesSelect.addEventListener("change", setVoice);
+//   words.push(word);
+//   constructList();
+// });

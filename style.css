@@ -39,6 +39,7 @@ header {
 
 .logo {
   margin: 10px;
+  margin-right: 0;
   text-align: center;
   font-size: 0.7em;
   width: 30%;
@@ -65,14 +66,15 @@ nav {
 nav ul {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 nav ul li {
-  width: 100%;
   padding: 20px 0;
+  margin: 0 20px;
   text-align: center;
   transition: transform 0.3s ease;
+  font-size: 14px;
 }
 
 nav li a {
@@ -90,15 +92,16 @@ main {
   display: grid;
   grid-template-areas:
     "header header header"
-    "main nav panel";
+    "main main nav "
+    "panel panel panel";
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 8px;
 }
 
-main h2 {
+h2 {
   text-align: center;
   grid-area: header;
-  color: #fff;
+  color: #eee;
   text-transform: uppercase;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   margin: 0;
@@ -141,12 +144,11 @@ main h2 {
 
 .panel {
   grid-area: panel;
-  width: 75px;
-  border-left: 2px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
   text-align: center;
   padding: 24px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
@@ -222,16 +224,6 @@ main h2 {
   margin: 40px 0;
 }
 
-.list h3 {
-  text-align: center;
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #ddd;
-  padding: 20px;
-  margin: 0;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-}
-
 .list ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -259,4 +251,76 @@ main h2 {
 .list ul li.active {
   color: var(--l-color);
   font-weight: bold;
+}
+
+.add-form {
+  width: 340px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.add-form form {
+  display: flex;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.add-form .inputs {
+  padding: 15px;
+  text-align: center;
+  width: 76%;
+}
+
+.inputs label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.inputs input {
+  width: 90%;
+  padding: 6px 0;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #eee;
+}
+
+.add-form button {
+  width: 24%;
+  font-size: 52px;
+  border-bottom-right-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-left: 2px solid rgba(0, 0, 0, 0.4);
+  color: #eee;
+}
+
+footer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 24px;
+}
+
+.copyright a {
+  color: #ddd;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.copyright .j {
+  color: #77d8d8;
+}
+
+.copyright .m {
+  color: #f2a365;
 }
