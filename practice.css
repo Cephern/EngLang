@@ -202,12 +202,11 @@ h2 {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   text-align: center;
+  margin-top: 80px;
 }
 
 .copyright {
