@@ -32,23 +32,6 @@
       </nav>
     </header>
 
-    <div class="lang-options">
-      <div class="eng-to-rus active">
-        <button>
-          <p>English</p>
-          <span>to</span>
-          <p>Русский</p>
-        </button>
-      </div>
-      <div class="rus-to-eng">
-        <button>
-          <p>Русский</p>
-          <span>to</span>
-          <p>English</p>
-        </button>
-      </div>
-    </div>
-
     <section class="practice">
       <div class="options">
         <div class="only-hard option">
@@ -66,23 +49,23 @@
         <h2>Training</h2>
 
         <div class="training-frame">
-          <div class="word">
-            <p>transparent</p>
+          <div id="word"></div>
+
+          <div class="input">
+            <input id="input" type="text" placeholder="Start here" />
           </div>
-          <div class="example">
-            <p>прозрачный</p>
-          </div>
+
+          <div id="example"></div>
           <button id="peek">
             <i class="fas fa-eye"></i>
-            <!-- <i class="fas fa-eye-slash"></i> -->
           </button>
         </div>
       </div>
     </section>
 
     <div class="progress-wrapp">
-      <progress value="60" max="100"></progress>
-      <span>6/10</span>
+      <progress value="6" max="10"></progress>
+      <span id="score">6/10</span>
     </div>
 
     <footer>
