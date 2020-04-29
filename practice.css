@@ -31,6 +31,10 @@ body {
   min-height: 100vh;
 }
 
+.container {
+  min-height: 80vh;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -100,49 +104,6 @@ h2 {
   padding: 20px;
 }
 
-.lang-options {
-  display: flex;
-  justify-content: space-between;
-  border-top: 2px solid rgba(0, 0, 0, 0.3);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  height: 80px;
-  width: 100%;
-}
-
-.lang-options div {
-  min-width: 160px;
-  overflow: hidden;
-}
-
-.lang-options button {
-  height: 80px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
-  border: 0;
-  cursor: pointer;
-  color: #ccc;
-}
-
-.lang-options button:active {
-  color: #fff;
-}
-
-.lang-options button p {
-  margin: 6px;
-}
-
-.eng-to-rus {
-  border-right: 2px solid rgba(0, 0, 0, 0.7);
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.rus-to-eng {
-  border-left: 2px solid rgba(0, 0, 0, 0.7);
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
 .options {
   display: flex;
   align-items: center;
@@ -164,6 +125,12 @@ h2 {
 .options button:active {
   color: var(--e-color);
   border-color: var(--l-color);
+}
+
+.practice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .training-wrapp {
@@ -287,8 +254,6 @@ footer {
   padding: 20px;
   text-align: center;
   margin-top: 80px;
-  position: fixed;
-  bottom: 0;
 }
 
 .copyright {

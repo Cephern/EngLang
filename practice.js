@@ -148,7 +148,7 @@ peekBtn.addEventListener("click", () => {
 
 input.addEventListener("input", (e) => {
   if (!peeked) {
-    let value = e.target.value;
+    let value = e.target.value.toLowerCase();
     splittedValue = value.split("");
     fillWord(splittedValue);
     checkWord();
