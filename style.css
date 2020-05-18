@@ -109,7 +109,7 @@ h2 {
 }
 
 #main-zone {
-  width: 200px;
+  width: 240px;
   grid-area: main;
   display: flex;
   align-items: center;
@@ -226,7 +226,7 @@ h2 {
 
 .list ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   text-align: center;
 }
