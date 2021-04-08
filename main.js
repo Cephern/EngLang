@@ -92,7 +92,7 @@ const words = [
     id: 9,
     eng: "arrive",
     trans: "[ эррайв ]",
-    rus: "прибить, приехать",
+    rus: "прибыть, приехать",
     difficulty: "normal",
   },
   {
